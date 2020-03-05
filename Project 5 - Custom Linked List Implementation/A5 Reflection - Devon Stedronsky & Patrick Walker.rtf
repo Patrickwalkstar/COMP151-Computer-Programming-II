@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red217\green11\blue5;\red217\green11\blue5;
+\red251\green2\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c88946\c14202\c0;\cssrgb\c88946\c14202\c0;
+\cssrgb\c100000\c14913\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww17820\viewh7620\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Reflection \
+Description of Testing Efforts: \
+Describe your tests, summarize your results, and argue that they cover all typed of program behavior\
+We originally wrote the program to handle normal variables and then changed the methods to work with generic variables. We did this to visualize the basics of our methods. All of our methods work and able to be tested. \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The twelve methods we implemented were: \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Object getFirst() - We first checked to see if the \cf3 linked list \cf2 used is empty. If the \cf4 \outl0\strokewidth0 linked list  \cf2 is empty return null. If the \cf4 linked list  \cf2 has at least one element return the first Node (casted type T).\cf2 \outl0\strokewidth0 \strokec2 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Object getLast() - We first checked to see if the \cf4 \outl0\strokewidth0 linked list  \cf2 used is empty. If the \cf4 linked list \cf2 is empty return null.\cf4  \cf2 If the \cf4 linked list \cf2 has at least one element return the last Node (casted type T), using the established length of the \cf4 length \cf2 - 1.\cf2 \outl0\strokewidth0 \strokec2 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 void add(Object value) - We first checked to see if the \cf5 linked list\cf2  is empty by checking if the first node is null. If the first node is null,  the newly created node n is assigned to the first node and the length of the list is increased. We then located the end of the list by checking each node until we found the null type, assigning it to currNode. As soon as the final node is located, the node after the currNode is assigned to n, our own created node. When the node is added, the length is increased.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 void addAfter(int index, Object value) - We first checked to see if the parameter index is greater than or equal to the length of the linked list. We printed an error message if the index is out of range. We then accessed the current and next node at the index value indicated. We assigned currNode to first and nextNode to currNode.next. Looping through the list, we assigned a new node n to the currNode.next node with the parameter value. When the node is added at the designated spot, the length is increased.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Object set(int index, Object newValue) - \cf2 \outl0\strokewidth0 We first checked to see if the parameter index is greater than or equal to the length of the linked list. We printed an error message if the index is out of range. We then assigned first node to currNode. Looping through the nodes of the list, we assigned currNode.next to currNode. We then created a new Object, oldData, that stores the data of currNode, and created assigned the parameter Object newValue to the currNode\'92s data. The oldData Object, the old information of the node at the designated index is returned. Using the data extensions of the nodes was difficult to understand and incorporate, but eventually understood the need to extract and assign the raw data of a particular node.\cf2 \outl0\strokewidth0 \strokec2 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	6.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 int lastIndex(Object value) - We first assigned currNode to the first Node and created a variable match to be a place holder for the last index of the parameter value. Looping through the list, we checked to see if the data (value) of the currNode is equal to the value of the parameter). In the case that the parameter value does equal the currNode.data the number of i last used is assigned to match. The currNode is assigned to the currNode.next to check the next node and so on for the length of the list. When all of the Nodes of the list are compared to the value, the last index of the parameter value is returned.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	7.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 void removeAll(Object value) - This method incorporates the remove method. While there exists an object at the location to remove, the method removes all nodes containing value and does nothing otherwise.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	8.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MyLinkedList<Object> clone() - We created a new MyLinkedList<T> and assigned the first node to currNode. We then looped through the list and added the current Node of the old list to the newList. We then increased the currNode by assigning the currNode to currNode.next. The newList is then returned, a clone of the old list. \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	9.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 boolean equals(Object o) - We first checked to see if the length of list equals the length of this, length. If the lengths of the two lists do not match, return false. We then incorporated the get method to check if the Node at i of both lists are equal. If these two Nodes are not equal return false. If all the tests pass, the method returns true.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	10.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MyLinkedList<Object> split() - We first checked if to see if the used list is empty, and if it is we returned the same list. We created two MyLinkedLists<T> for the front and back of the list. We then used two additional checks, one to handle an even list length and one to handle an odd list length. We then assigned the frontList to the original list and the second half of the split list to the backList. Each node from each respective list was added to their designated list using the add method. \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	11.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 void doubler() - We incorporated the addAfter method to add a copy of the node at currNode to the index after currNode. We then assigned currNode.next.next to currNode to move ahead two Nodes. Our loop to run through all the nodes of the list also increases by two as  add the copy of currNode to the correct index.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	12.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 void sublist(int i, int j) - We first checked to see if the parameters i and j are valid indices, and printed a statement if they are not. We then created a new MyLinkedList<T> to store all of the elements between i and j. The new list, sublist is returned. 
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Brief Reflection on the Program:\
+General Problems:\
+ - When we changed the methods to incorporate generic variables instead of normal variables there existed some bugs that were eventually corrected.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0  - Most if not all of the programs had to have the variables casted. \
+What were the trouble spots in completing this program?\
+ - Converting normal variables to generic variables.\
+ - Using the variables and methods already established in the first half of the program into our own code to create more complex methods.\
+What parts caused us the most grief?\
+ - The part that caused us the most grief was understanding how to incorporate Generics into our methods.\
+What did you learn from it?\
+We learned from this project how to incorporate pre-established methods into our own methods. We also learned about the complexity of LinkedLists, Nodes and the data extension that is associated with Nodes. We also learned how to use Generic variables within out own methods.}
