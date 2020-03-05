@@ -1,0 +1,36 @@
+Part 1 - Word count and average word length program
+Brief Report that includes a description of your testing efforts:
+
+Describe your tests, summarize your results, and argue that they cover all types
+of program behavior.
+
+Our tests for this program were successful. The results for each test returned either
+the word count & average word length or returned a message indicating and error.
+For our program, we first tested to see if the file exists in the directory or if the
+file can be read. If the file does exist and can be read we took into account the
+period of the file and further checked to see that the extensions of the file are txt 
+or dat. If the file is acceptable the scanner checks to see if the document has a next
+line. If the next line is not empty the amount of tokens in the tokenArray  are added
+to the total wordCount. Next we checked the individual tokens for their length and 
+added them to a total word length count. the final step was to print the total word
+count and the average word length by dividing the word length by the word count.
+
+Reflection for Part 1:
+~Some of the trouble spots for completing this program was checking for a valid file extension. When checking for a valid file extension we had not taken into account the "." in the extension. We solved this by making a string extension and creating a substring that took the string after the "." character. This was a small error. 
+~There was not much grief caused by this program except with format and determining whether 	or not to use an exception instead of simply printing a message in the case that the conditions we did not want were followed. A formal exception would make us write a separate exception class.
+~We learned that there is much thought that goes into writing a program that takes into account many strings. 
+		Word count = number of tokens
+		Average word length = all token lengths / number of tokens
+
+Part 2 - ChangeStyle program
+Brief Report that includes a description of your testing efforts:
+
+Describe your tests, summarize your results, and argue that they cover all types
+of program behavior.
+
+Our tests for this program were successful. Initially figuring out the process for this program was difficult. First tested whether the input filename was a valid file name. In the case that the file itself and the file name are valid, the file is immediately scanned and closed. In the case that the file is invalid a new FileNotFoundException is created, where the user is told that the file has a bad name. As we made elements to track line number, a String for the current line, and an array list to hold the lines that contain the character "{". Our next test was to see if the file had a next line to scan. In the case that a next line exists we checked to see if the line has the "{", and if it does add the line number to the array list of line numbers with this character. After the document was primarily scanner we checked to see if the array list was empty, meaning there are no lines with only the "{" character. This means that every other test has lines that have only the "{" character.  After creating new elements, we use the results from the first scan. A token array of the read line is created and checked for "{" character. If the line had the "{" character, it is omitted in each line it exists. The original token array is looked at to see which lines originally had the "{" character and then adding the character to the previous line (edited line). Now, the lines that originally had the character are blank. The next to last step is to check if the read line isn't the character, and add the edited line to the new file. The last step is to write to the new file.
+
+Reflection for Part 2:
+~Some of the trouble spots was figuring out the logistics of changing the style. One of our original problems was finding a way to read the file, and at the same time, edit two lines if the second line had the "{" character. Implementing some of the new concepts, such as ArrayList, reader(scanner), and writer can be difficult, but this was good practice. Sometimes, many of the intricacies of writing the correct code hadn't come to mind when writing this code (how many array lists do we need? after we've read the file, how to we check to see if the file was in the correct style to begin with/ how do we use this information from the primary scan to edit the correct lines?)
+~Some of the parts that caused the most grief was trying to figure out the order of precedence to read from a file and rewrite it in the correct style. Do we scan, then rewrite, then scan again? Or is there a simpler way? We found it best to scan for lines that doe have the character and store those numbers of those lines. We used that information to know which lines to edit in the correct way. 
+~We learned how to correctly implement the new concepts listed above. We learned that writing code sometimes requires "outside of the box" thinking. 
